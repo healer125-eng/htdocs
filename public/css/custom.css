@@ -59,6 +59,8 @@ Change Quick Sidebar Width
 }
 */
 
-.page-logo img {
-  width: 20%;
+.table-scrollable .table-borderless td {
+  border-top: 0px;
+  padding-top: 20px;
+  padding-bottom: 40px;
 }

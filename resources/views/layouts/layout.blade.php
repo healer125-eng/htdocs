@@ -4,7 +4,7 @@
 <!-- BEGIN HEAD -->
 <head>
 	<meta charset="utf-8"/>
-	<title>Metronic | Dashboard</title>
+	<title>DYNA</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta content="width=device-width, initial-scale=1" name="viewport"/>
 	<meta content="" name="description"/>
@@ -27,6 +27,7 @@
 	<link href="{{ asset('css/tasks.css') }}" rel="stylesheet">
 	<!-- END PAGE STYLES -->
 	<!-- BEGIN THEME STYLES -->
+	<link href="{{ asset('plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css') }}" rel="stylesheet">
 	<link href="{{ asset('css/components.css') }}" id="style_components" rel="stylesheet">
 	<link href="{{ asset('css/plugins.css') }}" rel="stylesheet">
 	<link href="{{ asset('css/layout.css') }}" rel="stylesheet">
@@ -44,8 +45,8 @@
 		<div class="page-header-inner">
 			<!-- BEGIN LOGO -->
 			<div class="page-logo">
-				<a href="index.html">
-				<img src="{{ asset('img/logo_big.jpg') }}" alt="logo" class="logo-default"/>
+				<a href="{{ url('/home') }}">
+				<img src="{{ asset('img/logo_layout.png') }}" alt="logo" class="logo-default"/>
 				</a>
 				<div class="menu-toggler sidebar-toggler hide">
 				</div>
@@ -109,7 +110,7 @@
 					<!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
 					<li class="dropdown dropdown-user">
 						<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-						<img alt="" class="img-circle" src="../../assets/admin/layout/img/avatar3_small.jpg"/>
+						<img alt="" class="img-circle" src="{{ asset('img/avatar3_small.jpg') }}"/>
 						<span class="username username-hide-on-mobile">
 						Nick </span>
 						<i class="fa fa-angle-down"></i>
@@ -128,7 +129,7 @@
 							<li class="divider">
 							</li>
 							<li>
-								<a href="login.html">
+								<a href="{{ url('/logout') }}">
 								<i class="icon-key"></i> Log Out </a>
 							</li>
 						</ul>
@@ -145,106 +146,7 @@
 	</div>
 	<!-- BEGIN CONTAINER -->
 	<div class="page-container">
-		<!-- BEGIN SIDEBAR -->
-		<div class="page-sidebar-wrapper">
-			<!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
-			<!-- DOC: Change data-auto-speed="200" to adjust the sub menu slide up/down speed -->
-			<div class="page-sidebar navbar-collapse collapse">
-				<!-- BEGIN SIDEBAR MENU -->
-				<!-- DOC: Apply "page-sidebar-menu-light" class right after "page-sidebar-menu" to enable light sidebar menu style(without borders) -->
-				<!-- DOC: Apply "page-sidebar-menu-hover-submenu" class right after "page-sidebar-menu" to enable hoverable(hover vs accordion) sub menu mode -->
-				<!-- DOC: Apply "page-sidebar-menu-closed" class right after "page-sidebar-menu" to collapse("page-sidebar-closed" class must be applied to the body element) the sidebar sub menu mode -->
-				<!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
-				<!-- DOC: Set data-keep-expand="true" to keep the submenues expanded -->
-				<!-- DOC: Set data-auto-speed="200" to adjust the sub menu slide up/down speed -->
-				<ul class="page-sidebar-menu " data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
-					<!-- DOC: To remove the sidebar toggler from the sidebar you just need to completely remove the below "sidebar-toggler-wrapper" LI element -->
-					<li class="sidebar-toggler-wrapper">
-						<!-- BEGIN SIDEBAR TOGGLER BUTTON -->
-						<div class="sidebar-toggler">
-						</div>
-						<!-- END SIDEBAR TOGGLER BUTTON -->
-					</li>
-					<li class="start active open">
-						<a href="javascript:;">
-						<i class="icon-home"></i>
-						<span class="title">Cockpit</span>
-						<span class="selected"></span>
-						</a>
-					</li>
-					<li>
-						<a href="javascript:;">
-						<i class="icon-basket"></i>
-						<span class="title">Messages</span>
-						</a>
-					</li>
-					<li>
-						<a href="javascript:;">
-						<i class="icon-rocket"></i>
-						<span class="title">Bookings</span>
-						</a>
-					</li>
-					<li>
-						<a href="javascript:;">
-						<i class="icon-diamond"></i>
-						<span class="title">Prices</span>
-						</a>
-					</li>
-					<li>
-						<a href="javascript:;">
-						<i class="icon-puzzle"></i>
-						<span class="title">Contacts</span>
-						</a>
-					</li>
-					<li>
-						<a href="javascript:;">
-						<i class="icon-settings"></i>
-						<span class="title">Settings</span>
-						</a>
-					</li>
-					<li>
-						<a href="javascript:;">
-						<i class="icon-briefcase"></i>
-						<span class="title">Services</span>
-						</a>
-					</li>
-					<li>
-						<a href="javascript:;">
-						<i class="icon-wallet"></i>
-						<span class="title">Reservations</span>
-						</a>
-					</li>
-					<li>
-						<a href="javascript:;">
-						<i class="icon-bar-chart"></i>
-						<span class="title">Statistics</span>
-						</a>
-					</li>
-					<li>
-						<a href="javascript:;">
-						<i class="icon-docs"></i>
-						<span class="title">Invoices</span>
-						</a>
-					</li>
-					<li>
-						<a href="javascript:;">
-						<i class="icon-present"></i>
-						<span class="title">Chat</span>
-						</a>
-					</li>
-				</ul>
-				<!-- END SIDEBAR MENU -->
-			</div>
-		</div>
-		<!-- END SIDEBAR -->
-		<!-- BEGIN CONTENT -->
-		<div class="page-content-wrapper">
-			<div class="page-content">
-			@yield('content')
-				
-			</div>
-		</div>
-		<!-- END CONTENT -->
+		@yield('content')
 		<!-- BEGIN QUICK SIDEBAR -->
 		<a href="javascript:;" class="page-quick-sidebar-toggler"><i class="icon-close"></i></a>
 		<!-- END QUICK SIDEBAR -->
@@ -277,20 +179,17 @@
 	<script src="{{ asset('plugins/jquery.cokie.min.js') }}" type="text/javascript"></script>
 	<script src="{{ asset('plugins/uniform/jquery.uniform.min.js') }}" type="text/javascript"></script>
 	<script src="{{ asset('plugins/bootstrap-switch/js/bootstrap-switch.min.js') }}" type="text/javascript"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 	<!-- END CORE PLUGINS -->
 	<!-- BEGIN PAGE LEVEL PLUGINS -->
-	<script src="{{ asset('plugins/jqvmap/jqvmap/jquery.vmap.js') }}" type="text/javascript"></script>
-	<script src="{{ asset('plugins/jqvmap/jqvmap/maps/jquery.vmap.russia.js') }}" type="text/javascript"></script>
-	<script src="{{ asset('plugins/jqvmap/jqvmap/maps/jquery.vmap.world.js') }}" type="text/javascript"></script>
-	<script src="{{ asset('plugins/jqvmap/jqvmap/maps/jquery.vmap.europe.js') }}" type="text/javascript"></script>
-	<script src="{{ asset('plugins/jqvmap/jqvmap/maps/jquery.vmap.germany.js') }}" type="text/javascript"></script>
-	<script src="{{ asset('plugins/jqvmap/jqvmap/maps/jquery.vmap.usa.js') }}" type="text/javascript"></script>
-	<script src="{{ asset('plugins/jqvmap/jqvmap/data/jquery.vmap.sampledata.js') }}" type="text/javascript"></script>
 	<script src="{{ asset('plugins/flot/jquery.flot.min.js') }}" type="text/javascript"></script>
 	<script src="{{ asset('plugins/flot/jquery.flot.resize.min.js') }}" type="text/javascript"></script>
 	<script src="{{ asset('plugins/flot/jquery.flot.categories.min.js') }}" type="text/javascript"></script>
 	<script src="{{ asset('plugins/jquery.pulsate.min.js') }}" type="text/javascript"></script>
 	<script src="{{ asset('plugins/bootstrap-daterangepicker/moment.min.js') }}" type="text/javascript"></script>
+	<script src="{{ asset('js/ui-datepaginator.js') }}"></script>
+	<script src="{{ asset('plugins/bootstrap-datepaginator/bootstrap-datepaginator.min.js') }}" type="text/javascript"></script>
+	<script src="{{ asset('plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js') }}" type="text/javascript"></script>
 	<script src="{{ asset('plugins/bootstrap-daterangepicker/daterangepicker.js') }}" type="text/javascript"></script>
 	<!-- IMPORTANT! fullcalendar depends on jquery-ui.min.js for drag & drop support -->
 	<script src="{{ asset('plugins/fullcalendar/fullcalendar.min.js') }}" type="text/javascript"></script>
@@ -305,6 +204,7 @@
 	<script src="{{ asset('js/index.js') }}" type="text/javascript"></script>
 	<script src="{{ asset('js/tasks.js') }}" type="text/javascript"></script>
 	<!-- END PAGE LEVEL SCRIPTS -->
+	<script src="{{ asset('js//table-editable.js') }}"></script>
 	<script>
 	jQuery(document).ready(function() {    
 	   Metronic.init(); // init metronic core componets
@@ -319,6 +219,8 @@
 	   Index.initChat();
 	   Index.initMiniCharts();
 	   Tasks.initDashboardWidget();
+	   UIDatepaginator.init();
+	   TableEditable.init();
 	});
 	</script>
 	<!-- END JAVASCRIPTS -->

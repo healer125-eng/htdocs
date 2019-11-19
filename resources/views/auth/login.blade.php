@@ -12,7 +12,7 @@
                         {{ csrf_field() }}
 
                         <div class="form-group" align="center">
-                            <img src="{{ asset('img/logo_big.jpg') }}" style="width: 20%">
+                            <img src="{{ asset('img/logo_custom.png') }}" style="width: 20%">
                         </div>
 
                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">

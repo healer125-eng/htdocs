@@ -37,7 +37,7 @@
     <!-- <div id="app"> -->
     <header id="header">
       <div id="logo" class="pull-left">
-        <h1><a href="#body" class="scrollto"><img class="logo_img" src="{{ asset('img/logo_big.jpg') }}"></a></h1>
+        <h1><a href="#body" class="scrollto"><img class="logo_img" src="{{ asset('img/logo_custom.png') }}"></a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="#body"><img src="img/logo.png" alt="" title="" /></a>-->
       </div>
@@ -46,7 +46,15 @@
         <ul class="nav-menu">
           @if (Route::has('login'))
             @if (Auth::check())
-                <li><a href="{{ url('/home') }}">About Us</a></li>
+                <li><a href="{{ url('/home') }}">Main Page</a></li>
+                <li class="menu-has-children"><a href="#"><img class="flag" src="{{ asset('img/flag logo/en.png') }}"></a>
+                <ul>
+                  <li><a href="#"><img class="flag" src="{{ asset('img/flag logo/fr.png') }}"></a></li>
+                  <li><a href="#"><img class="flag" src="{{ asset('img/flag logo/it.png') }}"></a></li>
+                  <li><a href="#"><img class="flag" src="{{ asset('img/flag logo/de.png') }}"></a></li>
+                  <li><a href="#"><img class="flag" src="{{ asset('img/flag logo/es.png') }}"></a></li>
+                </ul>
+              </li>
             @else
               <li><a href="{{ url('/login') }}">login</a></li>
               <li><a href="{{ url('/register') }}">register</a></li>
