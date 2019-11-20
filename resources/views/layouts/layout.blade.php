@@ -14,6 +14,8 @@
 	<link href="{{ asset('css/magnific-popup.css') }}" rel="stylesheet">
 	<link href="{{ asset('plugins/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
 	<link href="{{ asset('plugins/simple-line-icons/simple-line-icons.min.css') }}" rel="stylesheet">
+	<!-- <link href="{{ asset('plugins/datatables/plugins/bootstrap/dataTables.bootstrap.css') }}" rel="stylesheet">
+	<link href="{{ asset('plugins/datatables/plugins/select2/select2.css') }}" rel="stylesheet"> -->
 	<link href="{{ asset('plugins/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
 	<link href="{{ asset('plugins/uniform/css/uniform.default.css') }}" rel="stylesheet">
 	<link href="{{ asset('plugins/bootstrap-switch/css/bootstrap-switch.min.css') }}" rel="stylesheet">
@@ -21,7 +23,7 @@
 	<!-- BEGIN PAGE LEVEL PLUGIN STYLES -->
 	<link href="{{ asset('plugins/bootstrap-daterangepicker/daterangepicker-bs3.css') }}" rel="stylesheet">
 	<link href="{{ asset('plugins/fullcalendar/fullcalendar.min.css') }}" rel="stylesheet">
-	<link href="{{ asset('plugins/jqvmap/jqvmap/jqvmap.css') }}" rel="stylesheet">
+	<!-- <link href="{{ asset('plugins/jqvmap/jqvmap/jqvmap.css') }}" rel="stylesheet"> -->
 	<!-- END PAGE LEVEL PLUGIN STYLES -->
 	<!-- BEGIN PAGE STYLES -->
 	<link href="{{ asset('css/tasks.css') }}" rel="stylesheet">
@@ -169,6 +171,7 @@
 	<script src="../../assets/global/plugins/excanvas.min.js"></script> 
 	<![endif]-->
 	<script src="{{ asset('plugins/jquery.min.js') }}" type="text/javascript"></script>
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
 	<script src="{{ asset('plugins/jquery-migrate.min.js') }}" type="text/javascript"></script>
 	<!-- IMPORTANT! Load jquery-ui.min.js before bootstrap.min.js to fix bootstrap tooltip conflict with jquery ui tooltip -->
 	<script src="{{ asset('plugins/jquery-ui/jquery-ui.min.js') }}" type="text/javascript"></script>
@@ -195,6 +198,11 @@
 	<script src="{{ asset('plugins/fullcalendar/fullcalendar.min.js') }}" type="text/javascript"></script>
 	<script src="{{ asset('plugins/jquery-easypiechart/jquery.easypiechart.min.js') }}" type="text/javascript"></script>
 	<script src="{{ asset('plugins/jquery.sparkline.min.js') }}" type="text/javascript"></script>
+	<!-- START DATATABLE -->
+	<!-- <script src="{{ asset('plugins/datatables/media/js/jquery.dataTables.min.js') }}" type="text/javascript"></script>
+	<script src="{{ asset('plugins/datatables/plugins/bootstrap/dataTables.bootstrap.js') }}" type="text/javascript"></script>
+	<script src="{{ asset('js/select2.min.js') }}" type="text/javascript"></script> -->
+	<!-- EDIT DATATABLE -->
 	<!-- END PAGE LEVEL PLUGINS -->
 	<!-- BEGIN PAGE LEVEL SCRIPTS -->
 	<script src="{{ asset('js/metronic.js') }}" type="text/javascript"></script>
@@ -203,24 +211,24 @@
 	<script src="{{ asset('js/demo.js') }}" type="text/javascript"></script>
 	<script src="{{ asset('js/index.js') }}" type="text/javascript"></script>
 	<script src="{{ asset('js/tasks.js') }}" type="text/javascript"></script>
+	<!-- <script src="{{ asset('js/table-editable.js') }}" type="text/javascript"></script> -->
 	<!-- END PAGE LEVEL SCRIPTS -->
-	<script src="{{ asset('js//table-editable.js') }}"></script>
 	<script>
-	jQuery(document).ready(function() {    
+	jQuery(document).ready(function() {   
 	   Metronic.init(); // init metronic core componets
 	   Layout.init(); // init layout
 	   QuickSidebar.init(); // init quick sidebar
 	Demo.init(); // init demo features
 	   Index.init();   
 	   Index.initDashboardDaterange();
-	   Index.initJQVMAP(); // init index page's custom scripts
+	   // Index.initJQVMAP(); // init index page's custom scripts
 	   Index.initCalendar(); // init index page's custom scripts
 	   Index.initCharts(); // init index page's custom scripts
 	   Index.initChat();
 	   Index.initMiniCharts();
 	   Tasks.initDashboardWidget();
 	   UIDatepaginator.init();
-	   TableEditable.init();
+	   // TableEditable.init();
 	});
 	</script>
 	<!-- END JAVASCRIPTS -->
