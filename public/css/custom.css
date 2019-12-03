@@ -64,3 +64,61 @@ Change Quick Sidebar Width
   padding-top: 20px;
   padding-bottom: 40px;
 }
+
+.container .col-md-6 .panel-default {
+  background-color: #d5e8f8;
+}
+
+.container .col-md-6 .panel-default .panel-heading {
+  background-color: #d5e8f8;
+  text-align: center;
+}
+
+.container .panel-default .form-title {
+  color: #005fbb !important;
+}
+
+.container .col-md-6 .panel-body .form-horizontal .form-group input {
+  border-width: 2px;
+  border-color: #adc9ea;
+}
+
+.container .col-md-6 .panel-body .form-horizontal .submit-button {
+  background-color: #f7e200;
+  width: 100%;
+  color: #005fbb !important;
+  font-family: sans-serif;
+  border-width: 2px;
+  border-color: #e6bb00;
+}
+
+.container .col-md-6 .panel-body .form-horizontal .submit-button:hover {
+  background-color: #bdd8f1;
+  border-color: #adc9ea;
+}
+
+.container .col-md-6 .panel-body .form-horizontal .register-facebook-button {
+  background-color: #45619d;
+  width: 90%;
+  color: white;
+}
+
+.container .col-md-6 .panel-body .form-horizontal .register-twitter-button {
+  background-color: #b30303;
+  width: 90%;
+  color: white;
+}
+
+.container .col-md-6 .panel-body .form-horizontal label {
+  background-color: #d5e8f8;
+  border: 0px !important;
+  text-align: center;
+}
+
+.col-md-8 .panel-default {
+  background-color: #d5e8f8;
+}
+
+.col-md-8 .panel-default .panel-heading {
+  background-color: #d5e8f8;
+}

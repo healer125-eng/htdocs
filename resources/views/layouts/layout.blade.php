@@ -14,19 +14,18 @@
 	<link href="{{ asset('css/magnific-popup.css') }}" rel="stylesheet">
 	<link href="{{ asset('plugins/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
 	<link href="{{ asset('plugins/simple-line-icons/simple-line-icons.min.css') }}" rel="stylesheet">
-	<!-- <link href="{{ asset('plugins/datatables/plugins/bootstrap/dataTables.bootstrap.css') }}" rel="stylesheet">
-	<link href="{{ asset('plugins/datatables/plugins/select2/select2.css') }}" rel="stylesheet"> -->
-	<link href="{{ asset('plugins/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+	<link href="{{ asset('plugins/bootstrap/css/bootstrap.min.css') }}" id="bootstrap-css" rel="stylesheet">
 	<link href="{{ asset('plugins/uniform/css/uniform.default.css') }}" rel="stylesheet">
 	<link href="{{ asset('plugins/bootstrap-switch/css/bootstrap-switch.min.css') }}" rel="stylesheet">
 	<!-- END GLOBAL MANDATORY STYLES -->
 	<!-- BEGIN PAGE LEVEL PLUGIN STYLES -->
 	<link href="{{ asset('plugins/bootstrap-daterangepicker/daterangepicker-bs3.css') }}" rel="stylesheet">
 	<link href="{{ asset('plugins/fullcalendar/fullcalendar.min.css') }}" rel="stylesheet">
-	<!-- <link href="{{ asset('plugins/jqvmap/jqvmap/jqvmap.css') }}" rel="stylesheet"> -->
-	<!-- END PAGE LEVEL PLUGIN STYLES -->
+	<link href="{{ asset('plugins/select2/select2.css') }}"rel="stylesheet" />
+	<link href="{{ asset('plugins/datatables/plugins/bootstrap/dataTables.bootstrap.css') }}"rel="stylesheet" />
 	<!-- BEGIN PAGE STYLES -->
 	<link href="{{ asset('css/tasks.css') }}" rel="stylesheet">
+	
 	<!-- END PAGE STYLES -->
 	<!-- BEGIN THEME STYLES -->
 	<link href="{{ asset('plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css') }}" rel="stylesheet">
@@ -199,9 +198,9 @@
 	<script src="{{ asset('plugins/jquery-easypiechart/jquery.easypiechart.min.js') }}" type="text/javascript"></script>
 	<script src="{{ asset('plugins/jquery.sparkline.min.js') }}" type="text/javascript"></script>
 	<!-- START DATATABLE -->
-	<!-- <script src="{{ asset('plugins/datatables/media/js/jquery.dataTables.min.js') }}" type="text/javascript"></script>
+	<script src="{{ asset('plugins/datatables/media/js/jquery.dataTables.min.js') }}" type="text/javascript"></script>
 	<script src="{{ asset('plugins/datatables/plugins/bootstrap/dataTables.bootstrap.js') }}" type="text/javascript"></script>
-	<script src="{{ asset('js/select2.min.js') }}" type="text/javascript"></script> -->
+	<script src="{{ asset('js/select2.min.js') }}" type="text/javascript"></script>
 	<!-- EDIT DATATABLE -->
 	<!-- END PAGE LEVEL PLUGINS -->
 	<!-- BEGIN PAGE LEVEL SCRIPTS -->

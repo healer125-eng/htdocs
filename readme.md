@@ -49,3 +49,10 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+
+
+
+
+
+변수이름달기
+변수의 이름은 input태그에서는 모두 단수로 반영하였다. 실례: House Rules -> house_rule

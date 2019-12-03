@@ -104,14 +104,14 @@
                     <label class="col-md-3 control-label" style="font-size: 20px; color: green;">Contact</label>
                 </div>
                 <div class="form-group row">
-                    <label for="first_name" class="col-md-1">First Name</label>
+                    <label for="firstname" class="col-md-1">First Name</label>
                     <div class="col-md-4">
-                        <input type="text" class="form-control" name="first_name" id="first_name">
+                        <input type="text" class="form-control" name="firstname" id="firstname">
                     </div>
                     <div class="col-md-1"></div>
-                    <label for="last_name" class="col-md-1">Last Name</label>
+                    <label for="lastname" class="col-md-1">Last Name</label>
                     <div class="col-md-4">
-                        <input type="text" class="form-control" name="last_name" id="last_name">
+                        <input type="text" class="form-control" name="lastname" id="lastname">
                     </div>
                 </div>
                 <div class="form-group row">

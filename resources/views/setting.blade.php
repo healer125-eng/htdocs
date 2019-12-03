@@ -109,29 +109,29 @@
                             </td>
                         </tr>
                         <tr>
-                            <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add new Owner</button></td>
-                            <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">View List Owner</button></td>
-                            <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">View/Add staff</button></td>
+                            <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#add_owner">Add new Owner</button></td>
+                            <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#view_owner">View List Owner</button></td>
+                            <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#add_staff">View/Add staff</button></td>
                         </tr>
                         <tr>
                             <td>
-                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Communication Set Messages&<br>Templates</button>
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#communication">Communication Set Messages&<br>Templates</button>
                             </td>
                             <td>
-                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add/Edit Template</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Website Builder</button>
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit_message">Add/Edit Template</button>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Invoice Settings</button>
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#website_builder">Website Builder</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#invoice_setting">Invoice Settings</button>
                             </td>
                             <td>
-                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Admin Invoice Settings</button>
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#admin_invoice_setting">Admin Invoice Settings</button>
                             </td>
                             <td>
                                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">View/Edit Invoice Settings</button>
@@ -147,6 +147,13 @@
             </div>
             @include('setting_modals.add_property')
             @include('setting_modals.add_channel')
+            @include('setting_modals.add_owner')
+            @include('setting_modals.view_owner')
+            @include('setting_modals.add_staff')
+            @include('setting_modals.communication')
+            @include('setting_modals.website_builder')
+            @include('setting_modals.invoice_setting')
+            @include('setting_modals.admin_invoice_setting')
         </div>
     </div>
 </div>

@@ -1,42 +1,22 @@
-<div class="modal fade" id="add_channel" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog">
+<div class="modal fade bs-modal-lg" id="admin_invoice_setting" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
-                <h4 class="modal-title">Channels</h4>
+                <h4 class="modal-title">Admin Invoice Setting</h4>
             </div>
             <div class="modal-body">
-                <div class="form-group row">
-                    <div class="col-md-12">
-                    <!-- BEGIN EXAMPLE TABLE PORTLET-->
-                        <div class="portlet box blue">
-                            <div class="portlet-title">
-                                <div class="caption">
-                                    <i class="fa fa-edit"></i>Channels
-                                </div>
-                                <div class="tools">
-                                    <a href="javascript:;" class="collapse">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="portlet-body">
-                                <div class="tbl_user_data"></div>
-                            </div>
-                        </div>
-                        <!-- END EXAMPLE TABLE PORTLET-->
-                    </div>
-                </div>
+                <div class="tbl_invoice"></div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn default" data-dismiss="modal">Close</button>
                 <button type="button" class="btn blue">Save</button>
             </div>
-        </div>
         <!-- /.modal-content -->
+        </div>
     </div>
     <!-- /.modal-dialog -->
 </div>
-
 
 <script type="text/javascript" src="{{ asset('plugins/jquery.min.js') }}"></script>
 <script>
@@ -45,11 +25,11 @@
     $(document).ready(function() {
         var ajax_data =
         [
-            {status:"true", channel:"Airbnb.com", color:"green"},
-            {status:"true", channel:"Booking.com", color:"green"},
-            {status:"true", channel:"Homeaway.com", color:"green"},
-            {status:"true", channel:"Tripadvisor.com", color:"green"},
-            {status:"true", channel:"Expedia.com", color:"green"},
+            {owner:"true", currency:"Airbnb.com", monthly_fee:"green", monthly_fees:"green", reservation_fee:"green", reservation_fees:"green", vat:"green", vats:"green", invoice_due:"green"},
+            {owner:"true", currency:"Airbnb.com", monthly_fee:"green", monthly_fees:"green", reservation_fee:"green", reservation_fees:"green", vat:"green", vats:"green", invoice_due:"green"},
+            {owner:"true", currency:"Airbnb.com", monthly_fee:"green", monthly_fees:"green", reservation_fee:"green", reservation_fees:"green", vat:"green", vats:"green", invoice_due:"green"},
+            {owner:"true", currency:"Airbnb.com", monthly_fee:"green", monthly_fees:"green", reservation_fee:"green", reservation_fees:"green", vat:"green", vats:"green", invoice_due:"green"},
+            {owner:"true", currency:"Airbnb.com", monthly_fee:"green", monthly_fees:"green", reservation_fee:"green", reservation_fees:"green", vat:"green", vats:"green", invoice_due:"green"},
         ]
 
         var random_id = function() 
@@ -63,9 +43,14 @@
         tbl += '<table class="table table-hover">'
         tbl += '<thead>';
             tbl += '<tr>';
-            tbl += '<th>Status</th>';
-            tbl += '<th>Channel</th>';
-            tbl += '<th>Color</th>';
+            tbl += '<th>Owner</th>';
+            tbl += '<th>Monthly Fees@</th>';
+            tbl += '<th>Monthly Fees%</th>';
+            tbl += '<th>Reservation Fees@</th>';
+            tbl += '<th>Reservation Fees%</th>';
+            tbl += '<th>VAT(Y/N)</th>';
+            tbl += '<th>VAT$</th>';
+            tbl += '<th>Invoice Due</th>';
             tbl += '<th>Options</th>';
             tbl += '</tr>';
         tbl += '</thead>';
@@ -75,9 +60,15 @@
                 {
                     var row_id = random_id();
                     tbl += '<tr row_id="'+row_id+'">';
-                        tbl += '<td><div class="row_data" edit_type="click" col_name="status">'+val['status']+'</div></td>';
-                        tbl += '<td><div class="row_data" edit_type="click" col_name="channel">'+val['channel']+'</div></td>';
-                        tbl += '<td><div class="row_data" edit_type="click" col_name="color">'+val['color']+'</div></td>';
+                        tbl += '<td><div class="row_data" edit_type="click" col_name="owner">'+val['owner']+'</div></td>';
+                        tbl += '<td><div class="row_data" edit_type="click" col_name="currency">'+val['currency']+'</div></td>';
+                        tbl += '<td><div class="row_data" edit_type="click" col_name="monthly_fee">'+val['monthly_fee']+'</div></td>';
+                        tbl += '<td><div class="row_data" edit_type="click" col_name="monthly_fees">'+val['monthly_fees']+'</div></td>';
+                        tbl += '<td><div class="row_data" edit_type="click" col_name="reservation_fee">'+val['reservation_fee']+'</div></td>';
+                        tbl += '<td><div class="row_data" edit_type="click" col_name="reservation_fees">'+val['reservation_fees']+'</div></td>';
+                        tbl += '<td><div class="row_data" edit_type="click" col_name="vat">'+val['vat']+'</div></td>';
+                        tbl += '<td><div class="row_data" edit_type="click" col_name="vats">'+val['vats']+'</div></td>';
+                        tbl += '<td><div class="row_data" edit_type="click" col_name="invoice_due">'+val['invoice_due']+'</div></td>';
                         tbl +='<td>';
                             tbl +='<span class="btn_edit"> <a href="#" class="btn btn-link" row_id="'+row_id+'">Edit</a></span>';
                             tbl +='<span class="btn_save"> <a href="#" class="btn btn-link" row_id="'+row_id+'">Save</a> | </span>';
@@ -88,7 +79,7 @@
             tbl +='</tbody>';
         tbl +='</table>';
 
-        $(document).find('.tbl_user_data').html(tbl);
+        $(document).find('.tbl_invoice').html(tbl);
         $(document).find('.btn_save').hide();
         $(document).find('.btn_cancel').hide();
 
@@ -195,4 +186,3 @@
         });
     });
 </script>
-

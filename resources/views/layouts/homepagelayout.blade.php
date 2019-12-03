@@ -16,6 +16,7 @@
     <link href="{{ asset('css/ionicons.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/owl.carousel.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/magnific-popup.css') }}" rel="stylesheet">
+    <!-- <link href="{{ asset('css/login.css') }}" rel="stylesheet"> -->
     <!-- custom css file -->
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     <!-- scripts -->
@@ -73,7 +74,7 @@
     </header>
 
     @yield('content')
-    <!-- </div> -->
+    
     <footer id="footer">
       <div class="container">
         <div class="copyright">
